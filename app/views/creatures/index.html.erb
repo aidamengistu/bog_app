@@ -6,10 +6,12 @@
     <th>Creature</th>
     <th>Description</th>
   </tr>
-<% @creatures.each do |p| %>
+<% @creatures.each do |c| %>
   <tr>
-    <td><%= link_to p.name, p %></td>
-    <td><%= p.description %></td>
+    <td><%= link_to c.name, c %></td>
+    <td><%= c.description %></td>
+    <td><%= link_to "Update", edit_creature_path(c), class: "btn" %></td>
+    <td><%= link_to "Delete", creature_path(c), class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure?"} %></td>
   </tr>
 <% end %>
 </table>

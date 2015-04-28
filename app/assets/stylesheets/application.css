@@ -15,7 +15,7 @@
  */
 
 body {
-  background-color: #ebe6c3;
+  background-color: #EBE6C3;
   font-family: Verdana;
 }
 
@@ -32,7 +32,7 @@ body {
 
 th, td {
   padding: 15px;
-  background-color: #f1f1c1;
+  /*background-color: #F1F1C1;*/
 }
 
 .nav {
@@ -41,4 +41,10 @@ th, td {
 
 .nav a{
   color: white;
+}
+
+.btn {
+  background-color:#557828;
+  color: #FFFFFF;
+  margin:10px;
 }
