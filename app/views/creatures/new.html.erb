@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Enter a new creature:</h1>
+  <div class="row">
+      <%= form_for @creature do |f| %>
+      <%= f.text_field :name, :placeholder => "Enter a name"%>
+      <%= f.text_field :description, :placeholder => "Enter a description" %>
+      <%= f.submit "Submit" %>
+      <% end %>
+  </div>
+</div>

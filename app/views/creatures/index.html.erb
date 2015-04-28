@@ -1,0 +1,20 @@
+<div class="container">
+
+
+  <table class="AllCreaturesTable">
+  <tr>
+    <th>Creature</th>
+    <th>Description</th>
+  </tr>
+<% @creatures.each do |p| %>
+  <tr>
+    <td><%= link_to p.name, p %></td>
+    <td><%= p.description %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+
+
+
+

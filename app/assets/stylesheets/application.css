@@ -1,0 +1,44 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  background-color: #ebe6c3;
+  font-family: Verdana;
+}
+
+.oneCreatureTable {
+  border: 1;
+  width: 100%;
+}
+
+.AllCreaturesTable {
+  width: 100%;
+  margin-top: 20px;
+  border: 10px #E6E6E6;
+}
+
+th, td {
+  padding: 15px;
+  background-color: #f1f1c1;
+}
+
+.nav {
+  background-color: #557828;
+}
+
+.nav a{
+  color: white;
+}
