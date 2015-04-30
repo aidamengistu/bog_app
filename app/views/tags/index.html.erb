@@ -8,7 +8,7 @@
 <% @tags.each do |t| %>
   <tr>
     <td><%= link_to t.name, t %></td>
-    <td><%= link_to "Delete", tags_path(t), class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure?"} %></td>
+    <td><%= link_to "Delete", tag_path(t), class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure?"} %></td>
   </tr>
 <% end %>
 </table>
