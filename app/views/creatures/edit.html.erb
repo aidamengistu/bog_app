@@ -1,10 +1,11 @@
 <div class="container">
   <h1>Edit the info here:</h1>
   <div class="row">
-      <%= form_for @creature do |f| %>
+      <%= bootstrap_form_for @creature do |f| %>
       <%= f.text_field :name, :placeholder => "Enter a name"%>
       <%= f.text_field :description, :placeholder => "Enter a description" %>
-      <%= f.submit "Submit", class: "btn" %>
+      <%= f.collection_check_boxes :tag_ids, @tags, :id, :name %>
+      <%= f.submit "Update", class: "btn" %>
       <% end %>
   </div>
 </div>

@@ -1,0 +1,6 @@
+<div class="container">
+<h2>This lists all creatures that have the tag "<%= params[:tag] %>":</h2>
+<% @creatures.each do |c| %>
+<li><%= c.name %></li>
+<% end %>
+</div>

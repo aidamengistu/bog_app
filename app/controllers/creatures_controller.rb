@@ -6,14 +6,20 @@ class CreaturesController < ApplicationController
 
   def new
     @creature = Creature.new
+    @tags = Tag.all
   end
 
   def show
     @creature = Creature.find(params[:id])
+    @tags = @creature.tags
   end
 
   def create
     @creature = Creature.create(creature_params)
+    tags = params[:creature][:tag_ids]
+    tags.each do |tag_id|
+      @creature.tags << Tag.find(tag_id) unless tag_id.blank?
+    end
     redirect_to @creature
   end
 
@@ -23,12 +29,24 @@ class CreaturesController < ApplicationController
 
   def edit
     @creature = Creature.find(params[:id])
+    @tags = Tag.all
   end
 
   def update
     @creature = Creature.find(params[:id])
     @creature.update(creature_params)
+    @tags = Tag.all
+    @creature.tags.clear
+    tags = params[:creature][:tag_ids]
+    tags.each do |tag_id|
+      @creature.tags << Tag.find(tag_id) unless tag_id.blank?
+    end
     redirect_to @creature
+  end
+
+  def tag
+    tag = Tag.find_by_name(params[:tag])
+    @creatures = tag.creatures
   end
 
   def destroy
@@ -38,3 +56,6 @@ class CreaturesController < ApplicationController
   end
 
 end
+
+
+

@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Add a new tag:</h1>
+  <div class="row">
+      <%= bootstrap_form_for @tag do |f| %>
+      <%= f.text_field :name, :placeholder => "Enter a tag"%>
+      <%= f.submit "Submit", class: "btn" %>
+      <% end %>
+  </div>
+</div>

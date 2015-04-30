@@ -1,15 +1,19 @@
 <div class="container">
 
-  <h1>This is where I show details about a creature</h1>
+  <h1><%= @creature.name %> details:</h1>
 
   <table class="oneCreatureTable">
   <tr>
     <th>Creature</th>
     <th>Description</th>
+    <th>Tags</th>
   </tr>
   <tr>
     <td><%= @creature.name %></td>
     <td><%= @creature.description %></td>
+    <% @creature.tags.each do |t| %>
+    <td><%= link_to t.name, creature_tag_path(t.name) %></td>
+    <% end %>
     <td><%= link_to "Update", edit_creature_path, class: "btn" %></td>
     <td><%= link_to "Delete", creature_path, class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure?"} %></td>
   </tr>

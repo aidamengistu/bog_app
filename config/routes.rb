@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  resources :tags
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -8,6 +11,8 @@ Rails.application.routes.draw do
   # resources :creatures, :only => [:index, :create, :new, :show, :edit]
 
   resources :creatures
+
+  get 'creatures/tag/:tag' => 'creatures#tag', as: :creature_tag
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
