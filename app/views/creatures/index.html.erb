@@ -1,5 +1,6 @@
 <div class="container">
 
+<h1>Creatures of the Bog</h1>
 
   <table class="AllCreaturesTable">
   <tr>
@@ -11,7 +12,7 @@
     <td><%= link_to c.name, c %></td>
     <td><%= c.description %></td>
     <td><%= link_to "Update", edit_creature_path(c), class: "btn" %></td>
-    <td><%= link_to "Delete", creature_path(c), class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure?"} %></td>
+    <td><%= link_to "Delete", creature_path(c), class: "btn", method: :delete, data: {confirm: "Are you sure?"} %></td>
   </tr>
 <% end %>
 </table>

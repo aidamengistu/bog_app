@@ -1,12 +1,13 @@
 <div class="container">
 
   <h1><%= @creature.name %> details:</h1>
+  <br><br>
 
   <table class="oneCreatureTable">
   <tr>
     <th>Creature</th>
     <th>Description</th>
-    <th>Tags</th>
+    <br>
   </tr>
   <tr>
     <td><%= @creature.name %></td>
@@ -15,9 +16,10 @@
     <td><%= link_to t.name, creature_tag_path(t.name) %></td>
     <% end %>
     <td><%= link_to "Update", edit_creature_path, class: "btn" %></td>
-    <td><%= link_to "Delete", creature_path, class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure?"} %></td>
+    <td><%= link_to "Delete", creature_path, class: "btn", method: :delete, data: {confirm: "Are you sure?"} %></td>
   </tr>
 </table>
+    <td><img src="<%= @result.sample %>"></td>
 
 </div>
 

@@ -1,5 +1,6 @@
 class CreaturesController < ApplicationController
 
+
   def index
     @creatures = Creature.all
   end
@@ -12,7 +13,13 @@ class CreaturesController < ApplicationController
   def show
     @creature = Creature.find(params[:id])
     @tags = @creature.tags
+    list = flickr.photos.search :text => @creature.name, :sort => "relevance"
+    results = list.map do |photo|
+      "https:/farm3.static.flickr.com/#{photo["server"]}/""#{photo["id"]}_""#{photo["secret"]}_n.jpg"
+    end
+    @result = results
   end
+
 
   def create
     @creature = Creature.create(creature_params)

@@ -14,9 +14,11 @@
  *= require_self
  */
 
-body {
+#body {
   background-color: #EBE6C3;
-  font-family: Verdana;
+  font-family: Helvetica;
+/*  background-image: url("swamp.svg");
+  background-repeat: no-repeat;*/
 }
 
 .oneCreatureTable {
@@ -48,3 +50,14 @@ th, td {
   color: #FFFFFF;
   margin:10px;
 }
+
+h1 {
+  text-align: center;
+}
+
+.nav {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
