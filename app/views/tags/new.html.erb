@@ -5,5 +5,10 @@
       <%= f.text_field :name, :placeholder => "Enter a tag"%>
       <%= f.submit "Submit", class: "btn" %>
       <% end %>
+      <br>
+      <h3>Existing tags:</h3>
+      <% @tags.each do |t| %>
+      <li><%= t.name %></li>
+      <% end %>
   </div>
 </div>
